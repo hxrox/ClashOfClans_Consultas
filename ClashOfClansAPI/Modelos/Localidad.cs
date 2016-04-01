@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClashOfClans_Consultas.Modelos
+namespace ClashOfClansAPI.Modelos
 {
     class Localidad
     {

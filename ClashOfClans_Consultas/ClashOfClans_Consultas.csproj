@@ -66,7 +66,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="API\ClashOfClans.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -77,16 +76,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelos\Clan.cs" />
-    <Compile Include="Modelos\Clanes.cs" />
-    <Compile Include="Modelos\Jugador.cs" />
-    <Compile Include="Modelos\ClanDistintivoUrl.cs" />
-    <Compile Include="Modelos\LigaIconosUrls.cs" />
-    <Compile Include="Modelos\Liga.cs" />
-    <Compile Include="Modelos\Ligas.cs" />
-    <Compile Include="Modelos\Localidad.cs" />
-    <Compile Include="Modelos\Localidades.cs" />
-    <Compile Include="Modelos\Jugadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -113,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClashOfClansAPI\ClashOfClansAPI.csproj">
+      <Project>{bed96b63-df25-4ad4-90b2-7161bf546061}</Project>
+      <Name>ClashOfClansAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

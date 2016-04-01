@@ -1,5 +1,4 @@
-﻿using ClashOfClans_Consultas.Modelos;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ClashOfClans_Consultas.API;
 
 namespace ClashOfClans_Consultas
 {
@@ -33,9 +31,9 @@ namespace ClashOfClans_Consultas
 
         private void consultarClan()
         {
-            ClashOfClans coc = new ClashOfClans();
+            //ClashOfClans coc = new ClashOfClans();
 
-            Clan clan = coc.buscarClanPorTag("#8CQRGV28");
+            //Clan clan = coc.buscarClanPorTag("#8CQRGV28");
             //Clanes clanes = coc.buscarClanPorNombre("KICK ASS");
             //MiembrosClan miembros = coc.consultarMiembrosClan("#8CQRGV28");
             //Localidades localidades = coc.

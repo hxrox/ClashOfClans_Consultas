@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClashOfClans_Consultas.Modelos
+namespace ClashOfClansAPI.Modelos
 {
-    class Localidades
+    class Jugadores
     {
-        public Localidad items { get; set; }
+        public IList<Jugador> items { get; set; }
     }
 }

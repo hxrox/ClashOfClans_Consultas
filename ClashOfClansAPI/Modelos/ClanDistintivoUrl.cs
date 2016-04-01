@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClashOfClans_Consultas.Modelos
+namespace ClashOfClansAPI.Modelos
 {
-    class LigaIconosUrls
+    class ClanDistintivoUrl
     {
         public string small { get; set; }
-        public string tiny { get; set; }
+        public string large { get; set; }
         public string medium { get; set; }
     }
 }

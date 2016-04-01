@@ -1,0 +1,8 @@
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\bin\Debug\ClashOfClansAPI.dll
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\bin\Debug\ClashOfClansAPI.pdb
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\bin\Debug\RestSharp.dll
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\bin\Debug\Newtonsoft.Json.xml
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\bin\Debug\RestSharp.xml
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\obj\Debug\ClashOfClansAPI.dll
+D:\Users\maleman\Documents\Visual Studio 2015\Projects\ClashOfClans_Consultas\ClashOfClansAPI\obj\Debug\ClashOfClansAPI.pdb

@@ -1,4 +1,4 @@
-﻿using ClashOfClans_Consultas.Modelos;
+﻿using ClashOfClansAPI.Modelos;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Extensions.MonoHttp;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClashOfClans_Consultas.API
+namespace ClashOfClansAPI
 {
     class ClashOfClans
     {
@@ -43,7 +43,7 @@ namespace ClashOfClans_Consultas.API
         }
         public Clanes consultarClanesPorLocalidad(string localidadId)
         {
-            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "/locations/"+localidadId+ "/rankings/clans").Content);
+            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "/locations/" + localidadId + "/rankings/clans").Content);
         }
         public Jugadores consultarJugadoresPorLocalidad(string localidadId)
         {
