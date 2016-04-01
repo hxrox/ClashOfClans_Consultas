@@ -13,33 +13,45 @@ namespace ClashOfClans_Consultas.API
 {
     class ClashOfClans
     {
-        private string _apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImIwOGRlNzViLTA5NzYtNDY1Ni04NzZjLTNlNTBhZjVhNjRjMCIsImlhdCI6MTQ1OTM4MTc1Niwic3ViIjoiZGV2ZWxvcGVyLzI1Mzk0NTY4LTg3ZTctNGM0ZS01MjA0LTAzMGVjYTJlOTA3YyIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjIwMS4xNDguODEuMiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.YRp3TY7GSdjeKf3tYfAgLPeQQOZGBqRtHbgtX4IPqzrRg-df9Ki-G5L4p_pCpIbO-GToGCnGvnIrotoohlcTXA";
+        private string _apiKey = "Secret Key";
         private string _apiUrl = "https://api.clashofclans.com/";
-        private string _apiVersion = "v1/";
+        private string _apiVersion = "v1";
 
         public Clan buscarClanPorTag(string tag)
         {
-            return JsonConvert.DeserializeObject<Clan>(enviarSolicitud(_apiUrl + _apiVersion + "clans/" + System.Uri.EscapeDataString(tag)).Content);
+            return JsonConvert.DeserializeObject<Clan>(enviarSolicitud(_apiUrl + _apiVersion + "/clans/" + System.Uri.EscapeDataString(tag)).Content);
         }
         public Clanes buscarClanPorNombre(string nombre)
         {
-            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "clans?name=" + System.Uri.EscapeDataString(nombre)).Content);
+            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "/clans?name=" + System.Uri.EscapeDataString(nombre)).Content);
         }
-        public MiembrosClan consultarMiembrosClan(string tag)
+        public Jugadores consultarMiembrosClan(string tag)
         {
-            return JsonConvert.DeserializeObject<MiembrosClan>(enviarSolicitud(_apiUrl + _apiVersion + "clans/" + System.Uri.EscapeDataString(tag) + "/members").Content);
+            return JsonConvert.DeserializeObject<Jugadores>(enviarSolicitud(_apiUrl + _apiVersion + "/clans/" + System.Uri.EscapeDataString(tag) + "/members").Content);
         }
         public Clanes buscarClan(NameValueCollection parametros)
         {
-            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "clans" + this.ToQueryString(parametros)).Content);
+            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "/clans" + this.ToQueryString(parametros)).Content);
         }
         public Localidades consultarLocalidades()
         {
-            return JsonConvert.DeserializeObject<Localidades>(enviarSolicitud(_apiUrl + _apiVersion + "locations").Content);
+            return JsonConvert.DeserializeObject<Localidades>(enviarSolicitud(_apiUrl + _apiVersion + "/locations").Content);
         }
         public Localidad consultarLocalidadPorId(int localidadId)
         {
-            return JsonConvert.DeserializeObject<Localidad>(enviarSolicitud(_apiUrl + _apiVersion + "locations/" + localidadId).Content);
+            return JsonConvert.DeserializeObject<Localidad>(enviarSolicitud(_apiUrl + _apiVersion + "/locations/" + localidadId).Content);
+        }
+        public Clanes consultarClanesPorLocalidad(string localidadId)
+        {
+            return JsonConvert.DeserializeObject<Clanes>(enviarSolicitud(_apiUrl + _apiVersion + "/locations/"+localidadId+ "/rankings/clans").Content);
+        }
+        public Jugadores consultarJugadoresPorLocalidad(string localidadId)
+        {
+            return JsonConvert.DeserializeObject<Jugadores>(enviarSolicitud(_apiUrl + _apiVersion + "/locations/" + localidadId + "/rankings/players").Content);
+        }
+        public Ligas consultarLigas()
+        {
+            return JsonConvert.DeserializeObject<Ligas>(enviarSolicitud(_apiUrl + _apiVersion + "/leagues").Content);
         }
         protected IRestResponse enviarSolicitud(string url)
         {

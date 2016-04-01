@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans_Consultas.Modelos
 {
-    class ClanMiembro
+    class Jugador
     {
         public string tag { get; set; }
         public string name { get; set; }
@@ -17,7 +17,6 @@ namespace ClashOfClans_Consultas.Modelos
         public int clanRank { get; set; }
         public int previousClanRank { get; set; }
         public int donations { get; set; }
-
         public int donationsReceived { get; set; }
 
     }

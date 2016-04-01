@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClashOfClans_Consultas.Modelos
 {
-    class MiembrosClan
+    class Jugadores
     {
-        public IList<ClanMiembro> items { get; set; }
+        public IList<Jugador> items { get; set; }
     }
 }

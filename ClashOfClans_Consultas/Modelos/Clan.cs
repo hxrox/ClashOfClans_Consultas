@@ -21,6 +21,6 @@ namespace ClashOfClans_Consultas.Modelos
         public int clanPoints { get; set; }
         public int requiredTrophies { get; set; }
         public int members { get; set; }
-        public IList<ClanMiembro> memberList { get; set; }
+        public IList<Jugador> memberList { get; set; }
     }
 }

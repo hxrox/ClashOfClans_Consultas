@@ -79,14 +79,14 @@
   <ItemGroup>
     <Compile Include="Modelos\Clan.cs" />
     <Compile Include="Modelos\Clanes.cs" />
-    <Compile Include="Modelos\ClanMiembro.cs" />
+    <Compile Include="Modelos\Jugador.cs" />
     <Compile Include="Modelos\ClanDistintivoUrl.cs" />
     <Compile Include="Modelos\LigaIconosUrls.cs" />
     <Compile Include="Modelos\Liga.cs" />
     <Compile Include="Modelos\Ligas.cs" />
     <Compile Include="Modelos\Localidad.cs" />
     <Compile Include="Modelos\Localidades.cs" />
-    <Compile Include="Modelos\MiembrosClan.cs" />
+    <Compile Include="Modelos\Jugadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
